@@ -1,0 +1,31 @@
+/* adapted from: https://github.com/hochem/gatsby-animation-sliding */
+
+.sliding-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sliding-enter {
+  left: 100%;
+  overflow-y: hidden;
+}
+
+.sliding-enter.sliding-enter-active {
+  left: 0%;
+  transition: left 350ms ease-in-out;
+}
+
+.sliding-exit {
+  left: 0%;
+  overflow-y: hidden;
+}
+
+.sliding-exit.sliding-exit-active {
+  left: -100%;
+  transition: left 350ms ease-in-out;
+}
