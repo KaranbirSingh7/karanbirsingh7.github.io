@@ -4,7 +4,7 @@ import StaggeredList from '../components/staggeredList'
 const ContactPage = () => (
   <div>
     <div className="container header-margin-2">
-      <div style={{ paddingBottom: '10em' }} />      
+      <div style={{ paddingBottom: '9em' }} />      
       <div class="row ">
         <div class="col-sm-6 offset-sm-3">
           <div class="info-form">
