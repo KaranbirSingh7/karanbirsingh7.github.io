@@ -53,7 +53,7 @@ const ContactPage = () => (
                 <input type="submit" class="btn btn-success" value="Send" />
               </div>
             </form>
-            <div style={{ paddingBottom: '7.25em' }} />
+            <div style={{ paddingBottom: '12em' }} />
           </div>
         </div>
       </div>
