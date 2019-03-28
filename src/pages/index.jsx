@@ -46,6 +46,7 @@ const IndexPage = ({ pageContext, data }) => (
           Graphic by Israfil Arif
         </a>
       </div>
+      <div style={{ paddingBottom: '7.25em' }} />
     </div>
   </div>
 )
