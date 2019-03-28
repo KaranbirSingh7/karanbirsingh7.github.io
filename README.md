@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# Repo for my E-portfolio 
+
+>>>>>>> parent of 5579612... update README.md
 https://karanbirsingh7.github.io/
 <p align="center">
   <a href="https://next.gatsbyjs.org">
