@@ -23,7 +23,7 @@ const IndexPage = ({ pageContext, data }) => (
     <div className="container margin-bottom-1">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="main-title header-margin-2">About</h3>
+          <h3 className="main-title header-margin-2">WHOAMI</h3>
           <h4>Engineer with a focus on PaaS and automation.</h4>
           <p>
             I currently work as a Platform Engineer at
