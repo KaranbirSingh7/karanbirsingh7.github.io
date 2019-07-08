@@ -38,14 +38,14 @@ const IndexPage = ({ pageContext, data }) => (
             where I'm in charge of running Confluence and Jira
             (Platform-as-a-Service)
           </p>
-          <p>I enjoy exploring different tools and programming languages.</p>
+          <p>I enjoy building pipelines for automation, exploring different tools and languages.</p>
         </div>
       </div>
-      <div className="credit">
+      {/* <div className="credit">
         <a href="https://pngtree.com/freepng/iron-man-vector-art_3764300.html">
           Graphic by Israfil Arif
         </a>
-      </div>
+      </div> */}
       <div style={{ paddingBottom: '5em' }} />
     </div>
   </div>
