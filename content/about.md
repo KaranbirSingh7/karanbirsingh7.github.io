@@ -5,6 +5,6 @@ description: 'Hugo, the world’s fastest framework for building websites'
 aliases: ['about-us', 'about-hugo', 'contact']
 ---
 
-Hi There,
+Hello There,
 
 I am Karanbir. Currently working at Manulife as Platform Engineer.
