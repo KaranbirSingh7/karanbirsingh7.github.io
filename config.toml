@@ -15,13 +15,13 @@ pygmentscodefencesguesssyntax = true
 	keywords = ["hugo","vitae","theme","static"]
 
 	# Add meta description in head part
-	description = "[ Advance Engineer  💻 | Automation | Cloud | Containers ]"
+	description = "[ Automation | Cloud | Containers ]"
 
 	# Add pagetitle to homepage <title> tag
 	#pagetitle = "karanbirsingh7"
 
 	# Add a subtitle to your website
-	subtitle = "Platform Engineer @ Invesco | Working with Cloud & Containers"
+	subtitle = "Platform Engineer @ Manulife | Working with Cloud & Containers"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
@@ -30,7 +30,7 @@ pygmentscodefencesguesssyntax = true
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/avatar.png"
+	avatar = "/img/avatar.png.remove"
 
 	# Optional favicons for website
 	#favicon = true
