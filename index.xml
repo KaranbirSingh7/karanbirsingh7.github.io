@@ -1,6 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Karanbir Singh</title><link>https://karanbisingh7.github.io/</link><description>Recent content on Karanbir Singh</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 May 2021 14:32:18 -0300</lastBuildDate><atom:link href="https://karanbisingh7.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Automating Mac Development Setup</title><link>https://karanbisingh7.github.io/posts/automating-mac-dev-setup/</link><pubDate>Sun, 23 May 2021 14:32:18 -0300</pubDate><guid>https://karanbisingh7.github.io/posts/automating-mac-dev-setup/</guid><description>This weekend I spent my time configuring dotfiles and automating the development setup on mac using ansible playbooks.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Karanbir Singh</title>
+    <link>https://karanbisingh7.github.io/</link>
+    <description>Recent content on Karanbir Singh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 May 2021 14:32:18 -0300</lastBuildDate><atom:link href="https://karanbisingh7.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating Mac Development Setup</title>
+      <link>https://karanbisingh7.github.io/posts/automating-mac-dev-setup/</link>
+      <pubDate>Sun, 23 May 2021 14:32:18 -0300</pubDate>
+      
+      <guid>https://karanbisingh7.github.io/posts/automating-mac-dev-setup/</guid>
+      <description>This weekend I spent my time configuring dotfiles and automating the development setup on mac using ansible playbooks.
 Inspired by geerlingguy/mac-dev-playbook
-Why would you need something like this for development setup?
-Normally, you never know when your machine (mac) is going to have issues and you need to reconfigure new machine with all the required tools and configurations. In corporate world, it is normal to have your machine replaced for certain reasons.</description></item><item><title>My First Blog Post</title><link>https://karanbisingh7.github.io/posts/my-first-blog-post/</link><pubDate>Sat, 15 May 2021 18:59:37 -0300</pubDate><guid>https://karanbisingh7.github.io/posts/my-first-blog-post/</guid><description>This is my first blog post.
-I am trying out Hugo static site generator with this minimal theme Vitae</description></item><item><title>About</title><link>https://karanbisingh7.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karanbisingh7.github.io/about/</guid><description>Hi There,
-I am Karanbir. Currently working at Manulife as Platform Engineer.</description></item></channel></rss>
+ Why would you need something like this for development setup?
+Normally, you never know when your machine (mac) is going to have issues and you need to reconfigure new machine with all the required tools and configurations. In corporate world, it is normal to have your machine replaced for certain reasons.</description>
+    </item>
+    
+    <item>
+      <title>My First Blog Post</title>
+      <link>https://karanbisingh7.github.io/posts/my-first-blog-post/</link>
+      <pubDate>Sat, 15 May 2021 18:59:37 -0300</pubDate>
+      
+      <guid>https://karanbisingh7.github.io/posts/my-first-blog-post/</guid>
+      <description>This is my first blog post.
+I am trying out Hugo static site generator with this minimal theme Vitae</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://karanbisingh7.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://karanbisingh7.github.io/about/</guid>
+      <description>Hi There,
+I am Karanbir. Currently working at Manulife as Platform Engineer.</description>
+    </item>
+    
+  </channel>
+</rss>
