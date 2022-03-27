@@ -1,7 +1,131 @@
-<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.95.0"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta property="og:title" content="Posts"><meta name=keywords content="hugo,vitae,theme,static"><meta name=description content><meta property="og:title" content="Posts"><meta property="og:description" content="[ Automation | Cloud | Containers ]"><meta property="og:type" content="website"><meta property="og:url" content="https://karanbirsingh7.github.io/posts/"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="[ Automation | Cloud | Containers ]"><link rel=alternate type=application/rss+xml href=https://karanbirsingh7.github.io/posts/index.xml title="Karanbir Singh"><link rel=stylesheet type=text/css media=screen href=/css/normalize.css><link rel=stylesheet type=text/css media=screen href=/css/main.css><link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.min.css crossorigin=anonymous><script defer src=/js/katex.min.js integrity=sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz crossorigin=anonymous></script>
-<script defer src=/js/auto-render.min.js integrity=sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI crossorigin=anonymous onload=renderMathInElement(document.body)></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><title>Posts | Karanbir Singh</title></head><body><header><div id=avatar><a href=https://karanbirsingh7.github.io/><img src=/img/avatar.png alt="Karanbir Singh"></a></div><div id=titletext><h2 id=title><a href=https://karanbirsingh7.github.io/>Karanbir Singh</a></h2></div><div id=title-description><p id=subtitle>Platform Reliability Engineer @ Manulife | Working with Cloud & Containers</p><div id=social><nav><ul><li><a href=https://github.com/karanbirsingh7><i title=Github class="icons fab fa-github"></i></a></li><li><a href=mailto:karanbirsingh1161@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li></ul></nav></div></div><div id=mainmenu><nav><ul><li><a href=/>Home</a></li><li><a href=/posts>All Posts</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li><li><a href=/categories>Categories</a></li></ul></nav></div></header><main><h1 class=page-title>Posts</h1><ul class="posts flat"><li class=post><div class=post-header><div class=meta><div class=date><span class=day>23</span>
-<span class=rest>May 2021</span></div></div><div class=matter><h3 class="title small"><a href=/posts/automating-mac-dev-setup/>Automating Mac Development Setup</a></h3><div class=author></div><span class=description>This weekend I spent my time configuring dotfiles and automating the development setup on mac using ansible playbooks .
-Inspired by …</span></div></div></li><li class=post><div class=post-header><div class=meta><div class=date><span class=day>15</span>
-<span class=rest>May 2021</span></div></div><div class=matter><h3 class="title small"><a href=/posts/my-first-blog-post/>My First Blog Post</a></h3><div class=author></div><span class=description>This is my first blog post.
-I am trying out Hugo static site generator with this minimal theme Vitae</span></div></div></li></ul></main></body></html>
+<!DOCTYPE html>
+<html lang="en"><head>
+	
+	<meta name="generator" content="Hugo 0.96.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta property="og:title" content="Posts">
+	
+	
+	<meta name="keywords" content="hugo,vitae,theme,static"><meta name="description" content=""><meta property="og:title" content="Posts" />
+<meta property="og:description" content="[ Automation | Cloud | Containers ]" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://karanbirsingh7.github.io/posts/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="[ Automation | Cloud | Containers ]"/>
+<link rel="alternate" type="application/rss+xml" href="https://karanbirsingh7.github.io/posts/index.xml" title="Karanbir Singh">
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" />
+	<link rel="stylesheet" href="/css/katex.min.css" crossorigin="anonymous">
+	<script defer src="/js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="/js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			renderMathInElement(document.body, {
+				delimiters: [
+					{left: "$$", right: "$$", display: true},
+					{left: "$", right: "$", display: false}
+				]
+		});
+		});
+	</script><title>Posts | Karanbir Singh</title>
+
+
+</head>
+<body><header>
+	
+	<div id="avatar">
+		<a href="https://karanbirsingh7.github.io/">
+		  <img src="/img/avatar.png" alt="Karanbir Singh">
+		</a>
+	</div>
+	
+	<div id="titletext"><h2 id="title"><a href="https://karanbirsingh7.github.io/">Karanbir Singh</a></h2></div>
+	<div id="title-description"><p id="subtitle">Platform Reliability Engineer @ Manulife | Working with Cloud &amp; Containers</p><div id="social">
+			<nav>
+				<ul>
+					<li><a href="https://github.com/karanbirsingh7"><i title="Github" class="icons fab fa-github"></i></a></li><li><a href="mailto:karanbirsingh1161@gmail.com"><i title="Email" class="icons fas fa-envelope"></i></a></li></ul>
+			</nav>
+		</div>
+	</div>
+	
+	<div id="mainmenu">
+		<nav>
+			<ul>
+				
+				<li><a href="/">Home</a></li>
+				
+				<li><a href="/posts">All Posts</a></li>
+				
+				<li><a href="/about">About</a></li>
+				
+				<li><a href="/tags">Tags</a></li>
+				
+				<li><a href="/categories">Categories</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	
+</header>
+<main>
+<h1 class="page-title">Posts</h1>
+
+
+<ul class="posts flat"><li class="post">
+		<div class="post-header">
+			<div class="meta">
+				<div class="date">
+					<span class="day">23</span>
+					<span class="rest">May 2021</span>
+				</div>
+			</div>
+			<div class="matter">
+				<h3 class="title small"><a href="/posts/automating-mac-dev-setup/">Automating Mac Development Setup</a></h3>
+				<div class="author">
+				
+				</div>
+				<span class="description">
+				
+					This weekend I spent my time configuring dotfiles and automating the development setup on mac using ansible playbooks .
+Inspired by …
+				
+				</span>
+			</div>
+		</div>
+	</li><li class="post">
+		<div class="post-header">
+			<div class="meta">
+				<div class="date">
+					<span class="day">15</span>
+					<span class="rest">May 2021</span>
+				</div>
+			</div>
+			<div class="matter">
+				<h3 class="title small"><a href="/posts/my-first-blog-post/">My First Blog Post</a></h3>
+				<div class="author">
+				
+				</div>
+				<span class="description">
+				
+					This is my first blog post.
+I am trying out Hugo static site generator with this minimal theme Vitae 
+				
+				</span>
+			</div>
+		</div>
+	</li></ul>
+
+  </main>
+
+
+
+
+
+</body>
+</html>
