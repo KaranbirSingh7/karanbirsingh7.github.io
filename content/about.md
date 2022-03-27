@@ -7,4 +7,4 @@ aliases: ['about-us', 'about-hugo', 'contact']
 
 Hello There,
 
-I am Karanbir. Currently working at Manulife as Platform Engineer.
+I am Karanbir. Currently working at Manulife as Platform Reliability Engineer.
