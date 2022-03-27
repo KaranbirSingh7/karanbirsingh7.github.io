@@ -8,5 +8,3 @@ aliases: ['about-us', 'about-hugo', 'contact']
 Hello There,
 
 I am Karanbir. Currently working at Manulife as Platform Reliability Engineer.
-
-Sample change to test gh actions.
