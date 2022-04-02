@@ -14,3 +14,7 @@
     ```bash
     make build
     ```
+1. Create new blog post
+    ```bash
+    make new-post
+    ```
