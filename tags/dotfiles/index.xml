@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>dotfiles on Karanbir Singh</title>
+		<link>https://karanbirsingh7.github.io/tags/dotfiles/</link>
+		<description>Recent content in dotfiles on karanbirsingh7.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Sun, 23 May 2021 14:32:18 -0300</lastBuildDate>
+		
+		<atom:link href="https://karanbirsingh7.github.io/tags/dotfiles/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Automating Mac Development Setup</title>
+			<link>https://karanbirsingh7.github.io/posts/automating-mac-dev-setup/</link>
+			<pubDate>Sun, 23 May 2021 14:32:18 -0300</pubDate>
+			
+			<guid>https://karanbirsingh7.github.io/posts/automating-mac-dev-setup/</guid>
+			<description>
+			
+				This weekend I spent my time configuring dotfiles and automating the development setup on mac using ansible playbooks .
+Inspired by …
+			
+			</description>
+		</item>
+		
+	</channel>
+</rss>

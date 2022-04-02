@@ -9,8 +9,9 @@
 	<meta property="og:title" content="Makefile Automation as part of Workflow">
 	
 	
-	<meta name="keywords" content="hugo,vitae,theme,static"><meta name="description" content=""><meta property="og:title" content="Makefile Automation as part of Workflow" />
-<meta property="og:description" content="" />
+	<meta name="keywords" content="makefile"><meta name="description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using …"><meta property="og:title" content="Makefile Automation as part of Workflow" />
+<meta property="og:description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
+Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://karanbirsingh7.github.io/posts/makefile-automation/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-01T22:13:58-04:00" />
@@ -18,7 +19,8 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Makefile Automation as part of Workflow"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
+Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets."/>
 
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
@@ -96,7 +98,24 @@
 		</div>
 	</div>
 	<div class="markdown">
-		
+		<p>I have been using Makefile from spinning up docker containers to setting up local dev environment <code>venv</code> (<em>yeah I know I should be using docker-compose</em>) and I can safely say its still one of the best tools out for automating tasks.</p>
+<p>Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets.</p>
+<p>Interesting problem I ran into was how to read &ldquo;user input&rdquo; in Makefile and use that input to do something.
+In my case I wanted to read name of new blog from user and run underlying <code>hugo</code> commmand to create a new markdown page in <code>posts/</code></p>
+<p>Thankfully <a href="https://stackoverflow.com/questions/12170339/read-input-variable-in-makefile-and-set-variable-upon-its-name/12170504" target="_blank">StackOverflow</a>
+ and <a href="https://erictleung.com/user-input-makefile" target="_blank">this article</a>
+already had me covered 😊 and I was able to overcome this using following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888"># file: Makefile.hugo</span>
+</span></span><span style="display:flex;"><span>.PHONY: create-new-post
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create-new-post:
+</span></span><span style="display:flex;"><span>    @echo <span style="background-color:#fff0f0">&#34;got a name for new post?&#34;</span>; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>    <span style="color:#007020">read</span> POSTNAME; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>    <span style="color:#007020">echo</span> <span style="background-color:#fff0f0">&#34;creating new post </span><span style="color:#963">$$</span><span style="background-color:#fff0f0">POSTNAME&#34;</span>
+</span></span></code></pre></div><blockquote>
+<p>You might look at above code and ask why commands need to be chained together? Answer is that each command in Makefile run in its own subshell and that results in variable unable to survive. Putting them on single line or chaining them works.</p>
+</blockquote>
+
 	</div>
 	
 	
@@ -105,6 +124,47 @@
 	
 		
 	
+	
+	
+	<div class="tags">
+		<div class="taxosfloating_left">
+			<p>Tags</p>
+		</div>
+		<div class="termsfloating_right">
+			<p>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/makefile/"> makefile </a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		</div>
+		<div class="clearit"></div>
+		
+		
+		
 		
 		
 	</div></div>
