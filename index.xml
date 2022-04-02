@@ -6,10 +6,22 @@
 		<description>Recent content on karanbirsingh7.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Fri, 01 Apr 2022 21:29:32 -0400</lastBuildDate>
+		<lastBuildDate>Fri, 01 Apr 2022 22:13:58 -0400</lastBuildDate>
 		
 		<atom:link href="https://karanbirsingh7.github.io/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>Makefile Automation as part of Workflow</title>
+			<link>https://karanbirsingh7.github.io/posts/makefile-automation/</link>
+			<pubDate>Fri, 01 Apr 2022 22:13:58 -0400</pubDate>
+			
+			<guid>https://karanbirsingh7.github.io/posts/makefile-automation/</guid>
+			<description>
+			
+				
+			
+			</description>
+		</item>
 		<item>
 			<title>Useful commands when working with certificates</title>
 			<link>https://karanbirsingh7.github.io/posts/certificates-cheatsheet/</link>

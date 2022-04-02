@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>openssl on Karanbir Singh</title>
+		<link>https://karanbirsingh7.github.io/tags/openssl/</link>
+		<description>Recent content in openssl on karanbirsingh7.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Fri, 01 Apr 2022 21:29:32 -0400</lastBuildDate>
+		
+		<atom:link href="https://karanbirsingh7.github.io/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Useful commands when working with certificates</title>
+			<link>https://karanbirsingh7.github.io/posts/certificates-cheatsheet/</link>
+			<pubDate>Fri, 01 Apr 2022 21:29:32 -0400</pubDate>
+			
+			<guid>https://karanbirsingh7.github.io/posts/certificates-cheatsheet/</guid>
+			<description>
+			
+				I have been using openssl command line for past few weeks to rotate some of the yearly expiring certs on our internal platforms. If you are …
+			
+			</description>
+		</item>
+		
+	</channel>
+</rss>
