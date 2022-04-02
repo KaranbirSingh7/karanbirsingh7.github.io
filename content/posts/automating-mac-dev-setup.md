@@ -2,6 +2,11 @@
 title: 'Automating Mac Development Setup'
 date: 2021-05-23T14:32:18-03:00
 draft: false
+tags: 
+  - macos
+  - ansible
+  - brew
+  - dotfiles
 ---
 
 This weekend I spent my time configuring [dotfiles](https://github.com/KaranbirSingh7/dotfiles) and automating the development setup on mac using [ansible playbooks](https://github.com/KaranbirSingh7/mac-dev-playbook).
