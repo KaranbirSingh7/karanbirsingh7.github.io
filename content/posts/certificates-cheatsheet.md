@@ -2,6 +2,7 @@
 title: "Useful commands when working with certificates"
 date: 2022-04-01T21:29:32-04:00
 draft: false
+tags: openssl
 ---
 I have been using `openssl` command line for past few weeks to rotate some of the yearly expiring certs on our internal platforms. If you are one of my co-worked reading this, then you know what I am talking about :grin:.
 
