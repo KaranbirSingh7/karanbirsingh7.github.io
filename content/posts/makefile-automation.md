@@ -1,9 +1,11 @@
 ---
-title: "Makefile Automation as part of Workflow"
-date: 2022-04-01T22:13:58-04:00
-draft: true
+title: "Makefile automation as part of my development workflow"
+date: 2022-04-03T22:13:58-04:00
+draft: false
 tags:
     - makefile
+    - python
+    - terraform
 ---
 
 I have been using Makefile from spinning up docker containers to setting up local dev environment `venv` (_yeah I know I should be using docker-compose_) and I can safely say its still one of the best tools out for automating tasks.
@@ -27,3 +29,87 @@ create-new-post:
 ```
 
 >You might look at above code and ask why commands need to be chained together? Answer is that each command in Makefile run in its own subshell and that results in variable unable to survive. Putting them on single line or chaining them works.
+
+### Bonus :star: 
+
+Here's list of useful Makefiles that I use across my projects:
+
+**Python**    
+```bash
+# ref: https://venthur.de/2021-03-31-python-makefiles.html
+# system python interpreter. used only to create virtual environment
+PY = python3
+VENV = venv
+BIN=$(VENV)/bin
+
+# make it work on windows too
+ifeq ($(OS), Windows_NT)
+    BIN=$(VENV)/Scripts
+    PY=python
+endif
+
+$(VENV): requirements.txt
+	$(PY) -m venv $(VENV)
+	$(BIN)/pip install --upgrade -r requirements.txt
+	touch $(VENV)
+	@echo "virtualenv created."
+	@echo "activate venv in current session by running -> . ./$(BIN)/activate "
+
+.PHONY: $(VENV)
+
+clean:
+	rm -rf $(VENV)
+```
+
+
+**Terraform**
+```bash
+# from: https://www.sapranidis.gr/working-with-terraform-and-makefile/
+
+SHELL:=/bin/bash
+
+all: plan
+
+clean:
+	rm -f /tmp/plan_stg
+
+get:
+	@echo "Updating modules"
+	@terraform get -update
+
+format:
+	@echo "Format existing code"
+	@terraform fmt
+
+show:
+	@echo "Showing plan to apply"
+	@terraform show /tmp/plan_stg
+
+plan: format get
+	@echo "Checking Infrastracture"
+	@terraform plan -out /tmp/plan_stg
+	$(MAKE) confirm
+	$(MAKE) apply
+
+apply:
+	@echo "Applying changes to Infrastracture"
+	@terraform apply /tmp/plan_stg
+	@echo "Clean up after myself"
+	$(MAKE) clean
+
+confirm:
+	@read -r -t 5 -p "Type y to apply, otherwise it will abort (timeout in 5 seconds): " CONTINUE; \
+	if [ ! $$CONTINUE == "y" ] || [ -z $$CONTINUE ]; then \
+	    echo "Abort apply." ; \
+		exit 1; \
+	fi
+
+help: 
+	@echo "Usage: make plan"
+	@echo "After applying terraform plan it prompt if to apply the changes."
+	@echo "Other commands: "
+	@echo " * make show - to list what the plan will apply "
+	@echo " * make clean - delete the executed plan, so no files left behind "
+	@echo " * make get - update the teffarom modules"
+	@echo " * make format - execute terraform fmt"
+```
