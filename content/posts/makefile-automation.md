@@ -36,6 +36,7 @@ Here's list of useful Makefiles that I use across my projects:
 
 **Python**    
 ```bash
+# Makefile 'python'
 # ref: https://venthur.de/2021-03-31-python-makefiles.html
 # system python interpreter. used only to create virtual environment
 PY = python3
@@ -64,7 +65,8 @@ clean:
 
 **Terraform**
 ```bash
-# from: https://www.sapranidis.gr/working-with-terraform-and-makefile/
+# Makefile 'terraform'
+# ref: https://www.sapranidis.gr/working-with-terraform-and-makefile/
 
 SHELL:=/bin/bash
 
@@ -112,4 +114,39 @@ help:
 	@echo " * make clean - delete the executed plan, so no files left behind "
 	@echo " * make get - update the teffarom modules"
 	@echo " * make format - execute terraform fmt"
+```
+
+**Go**
+```bash
+# Makefile 'go'
+# ref: https://golangdocs.com/makefiles-golang
+
+BINARY_NAME=my-awesome-app
+
+all: build test
+
+run:
+	go build -o bin/${BINARY_NAME} *.go
+	./bin/${BINARY_NAME}
+
+build:
+	GOARCH=amd64 GOOS=darwin go build -o bin/${BINARY_NAME}-darwin *.go
+	GOARCH=amd64 GOOS=linux go build -o bin/${BINARY_NAME}-linux *.go
+	GOARCH=amd64 GOOS=window go build -o bin/${BINARY_NAME}-windows *.go
+
+clean:
+	go clean
+	rm bin/${BINARY_NAME}-darwin
+	rm bin/${BINARY_NAME}-linux
+	rm bin/${BINARY_NAME}-windows
+
+dep:
+	go mod download
+
+vet:
+	go vet
+
+test:
+	go test -v *.go
+
 ```
