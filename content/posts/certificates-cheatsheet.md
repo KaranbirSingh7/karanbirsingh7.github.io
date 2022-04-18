@@ -43,7 +43,7 @@ The above would generate a new config file which can be passed onto openssl to c
 ---
 #### **Create a new private key :key: and Certificate Signing Request from config `${SITE_NAME}.csr.txt`**
 ```bash
-openssl -req -new -sha256 -nodes -out ${SITE_NAME}.csr \
+openssl req -new -sha256 -nodes -out ${SITE_NAME}.csr \
     -newkey rsa:2048 -keyout ${SITE_NAME}.key \
     -config ${SITE_NAME}.csr.txt
 ```
