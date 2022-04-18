@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 	
-	<meta name="generator" content="Hugo 0.96.0" />
+	<meta name="generator" content="Hugo 0.97.2" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -133,7 +133,7 @@ This list of most common OpenSSL commands from SSLShopper covers more of the wha
 </span></span></code></pre></div><p>The above would generate a new config file which can be passed onto openssl to create a new CSR request</p>
 <hr>
 <h4 id="create-a-new-private-key--and-certificate-signing-request-from-config-site_namecsrtxt"><strong>Create a new private key 🔑 and Certificate Signing Request from config <code>${SITE_NAME}.csr.txt</code></strong></h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl -req -new -sha256 -nodes -out <span style="background-color:#eee">${</span><span style="color:#963">SITE_NAME</span><span style="background-color:#eee">}</span>.csr <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -new -sha256 -nodes -out <span style="background-color:#eee">${</span><span style="color:#963">SITE_NAME</span><span style="background-color:#eee">}</span>.csr <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
 </span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>    -newkey rsa:2048 -keyout <span style="background-color:#eee">${</span><span style="color:#963">SITE_NAME</span><span style="background-color:#eee">}</span>.key <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
 </span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>    -config <span style="background-color:#eee">${</span><span style="color:#963">SITE_NAME</span><span style="background-color:#eee">}</span>.csr.txt
 </span></span></code></pre></div><hr>
