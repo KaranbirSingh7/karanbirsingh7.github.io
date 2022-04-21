@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>python on Karanbir Singh</title>
-		<link>https://karanbirsingh7.github.io/tags/python/</link>
-		<description>Recent content in python on karanbirsingh7.github.io</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<lastBuildDate>Sun, 03 Apr 2022 22:13:58 -0400</lastBuildDate>
-		
-		<atom:link href="https://karanbirsingh7.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Makefile automation as part of my development workflow</title>
-			<link>https://karanbirsingh7.github.io/posts/makefile-automation/</link>
-			<pubDate>Sun, 03 Apr 2022 22:13:58 -0400</pubDate>
-			
-			<guid>https://karanbirsingh7.github.io/posts/makefile-automation/</guid>
-			<description>
-			
-				I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using …
-			
-			</description>
-		</item>
-		
-	</channel>
+  <channel>
+    <title>python on karanbir</title>
+    <link>https://karanbirsingh7.github.io/tags/python/</link>
+    <description>Recent content in python on karanbir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Apr 2022 22:13:58 -0400</lastBuildDate><atom:link href="https://karanbirsingh7.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Makefile automation as part of my development workflow</title>
+      <link>https://karanbirsingh7.github.io/posts/makefile-automation/</link>
+      <pubDate>Sun, 03 Apr 2022 22:13:58 -0400</pubDate>
+      
+      <guid>https://karanbirsingh7.github.io/posts/makefile-automation/</guid>
+      <description>I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
+Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets.</description>
+    </item>
+    
+  </channel>
 </rss>

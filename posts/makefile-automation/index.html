@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-	
-	<meta name="generator" content="Hugo 0.97.3" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-	<meta property="og:title" content="Makefile automation as part of my development workflow">
-	
-	
-	<meta name="keywords" content="makefile,python,terraform"><meta name="description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using …"><meta property="og:title" content="Makefile automation as part of my development workflow" />
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Karanbir Singh">
+    <meta name="description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
+Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets.">
+    <meta name="keywords" content="blog, developer, personal, sre">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Makefile automation as part of my development workflow"/>
+<meta name="twitter:description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
+Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets."/>
+
+    <meta property="og:title" content="Makefile automation as part of my development workflow" />
 <meta property="og:description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
 Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets." />
 <meta property="og:type" content="article" />
@@ -17,136 +26,192 @@ Recently I included Makefile into this repo so that I can build/publish/run hugo
 <meta property="article:published_time" content="2022-04-03T22:13:58-04:00" />
 <meta property="article:modified_time" content="2022-04-03T22:13:58-04:00" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Makefile automation as part of my development workflow"/>
-<meta name="twitter:description" content="I have been using Makefile from spinning up docker containers to setting up local dev environment venv (yeah I know I should be using docker-compose) and I can safely say its still one of the best tools out for automating tasks.
-Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets."/>
-
-	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" />
-	<link rel="stylesheet" href="/css/katex.min.css" crossorigin="anonymous">
-	<script defer src="/js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-	<script defer src="/js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			renderMathInElement(document.body, {
-				delimiters: [
-					{left: "$$", right: "$$", display: true},
-					{left: "$", right: "$", display: false}
-				]
-		});
-		});
-	</script><title>Makefile automation as part of my development workflow | Karanbir Singh</title>
 
 
-</head>
-<body><header>
-	
-	<div id="avatar">
-		<a href="https://karanbirsingh7.github.io/">
-		  <img src="/img/avatar.png" alt="Karanbir Singh">
-		</a>
-	</div>
-	
-	<div id="titletext"><h2 id="title"><a href="https://karanbirsingh7.github.io/">Karanbir Singh</a></h2></div>
-	<div id="title-description"><p id="subtitle">Platform Reliability Engineer @ Manulife | Working with Cloud &amp; Containers</p><div id="social">
-			<nav>
-				<ul>
-					<li><a href="https://github.com/karanbirsingh7"><i title="Github" class="icons fab fa-github"></i></a></li><li><a href="mailto:karanbirsingh1161@gmail.com"><i title="Email" class="icons fas fa-envelope"></i></a></li></ul>
-			</nav>
-		</div>
-	</div>
-	
-	<div id="mainmenu">
-		<nav>
-			<ul>
-				
-				<li><a href="/">Home</a></li>
-				
-				<li><a href="/posts">All Posts</a></li>
-				
-				<li><a href="/about">About</a></li>
-				
-				<li><a href="/tags">Tags</a></li>
-				
-				<li><a href="/categories">Categories</a></li>
-				
-			</ul>
-		</nav>
-	</div>
-	
-</header>
-<main><div class="post">
-	
-	<div class="author">
-	
-	</div>
-	<div class="post-header">
-	
-		<div class="meta">
-			
-			<div class="date">
-				<span class="day">03</span>
-				<span class="rest">Apr 2022</span>
-			</div>
-			
-		</div>
-		
-		<div class="matter">
-			<h1 class="title">Makefile automation as part of my development workflow</h1>
-		</div>
-	</div>
-	<div class="markdown">
-		<p>I have been using Makefile from spinning up docker containers to setting up local dev environment <code>venv</code> (<em>yeah I know I should be using docker-compose</em>) and I can safely say its still one of the best tools out for automating tasks.</p>
+    <title>
+  Makefile automation as part of my development workflow · karanbir
+</title>
+
+    
+      <link rel="canonical" href="https://karanbirsingh7.github.io/posts/makefile-automation/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.97.3" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      karanbir
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/tags">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://karanbirsingh7.github.io/posts/makefile-automation/">
+              Makefile automation as part of my development workflow
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-04-03T22:13:58-04:00">
+                April 3, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/makefile/">makefile</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/python/">python</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/terraform/">terraform</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I have been using Makefile from spinning up docker containers to setting up local dev environment <code>venv</code> (<em>yeah I know I should be using docker-compose</em>) and I can safely say its still one of the best tools out for automating tasks.</p>
 <p>Recently I included Makefile into this repo so that I can build/publish/run hugo site easily without having to look through documentation on which command to run for local-server or build assets.</p>
 <p>Interesting problem I ran into was how to read &ldquo;user input&rdquo; in Makefile and use that input to do something.
 In my case I wanted to read name of new blog from user and run underlying <code>hugo</code> commmand to create a new markdown page in <code>posts/</code></p>
-<p>Thankfully <a href="https://stackoverflow.com/questions/12170339/read-input-variable-in-makefile-and-set-variable-upon-its-name/12170504" target="_blank">StackOverflow</a>
- and <a href="https://erictleung.com/user-input-makefile" target="_blank">this article</a>
-already had me covered 😊 and I was able to overcome this using following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888"># file: Makefile.hugo</span>
+<p>Thankfully <a href="https://stackoverflow.com/questions/12170339/read-input-variable-in-makefile-and-set-variable-upon-its-name/12170504">StackOverflow</a> and <a href="https://erictleung.com/user-input-makefile">this article</a>already had me covered 😊 and I was able to overcome this using following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># file: Makefile.hugo</span>
 </span></span><span style="display:flex;"><span>.PHONY: create-new-post
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>create-new-post:
-</span></span><span style="display:flex;"><span>    @echo <span style="background-color:#fff0f0">&#34;got a name for new post?&#34;</span>; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>    <span style="color:#007020">read</span> POSTNAME; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>    <span style="color:#007020">echo</span> <span style="background-color:#fff0f0">&#34;creating new post </span><span style="color:#963">$$</span><span style="background-color:#fff0f0">POSTNAME&#34;</span>
+</span></span><span style="display:flex;"><span>    @echo <span style="color:#f1fa8c">&#34;got a name for new post?&#34;</span>; <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>    <span style="color:#8be9fd;font-style:italic">read</span> POSTNAME; <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;creating new post </span><span style="color:#8be9fd;font-style:italic">$$</span><span style="color:#f1fa8c">POSTNAME&#34;</span>
 </span></span></code></pre></div><blockquote>
 <p>You might look at above code and ask why commands need to be chained together? Answer is that each command in Makefile run in its own subshell and that results in variable unable to survive. Putting them on single line or chaining them works.</p>
 </blockquote>
-<h3 id="bonus-">Bonus ⭐</h3>
+<h3 id="bonus-">
+  Bonus ⭐
+  <a class="heading-link" href="#bonus-">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
 <p>Here&rsquo;s list of useful Makefiles that I use across my projects:</p>
 <p><strong>Python</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888"># Makefile &#39;python&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#888"># ref: https://venthur.de/2021-03-31-python-makefiles.html</span>
-</span></span><span style="display:flex;"><span><span style="color:#888"># system python interpreter. used only to create virtual environment</span>
-</span></span><span style="display:flex;"><span><span style="color:#963">PY</span> <span style="color:#333">=</span> python3
-</span></span><span style="display:flex;"><span><span style="color:#963">VENV</span> <span style="color:#333">=</span> venv
-</span></span><span style="display:flex;"><span><span style="color:#963">BIN</span><span style="color:#333">=</span><span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>/bin
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Makefile &#39;python&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ref: https://venthur.de/2021-03-31-python-makefiles.html</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># system python interpreter. used only to create virtual environment</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">PY</span> <span style="color:#ff79c6">=</span> python3
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">VENV</span> <span style="color:#ff79c6">=</span> venv
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">BIN</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>/bin
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#888"># make it work on windows too</span>
-</span></span><span style="display:flex;"><span>ifeq <span style="color:#333">(</span><span style="color:#080;font-weight:bold">$(</span>OS<span style="color:#080;font-weight:bold">)</span>, Windows_NT<span style="color:#333">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#963">BIN</span><span style="color:#333">=</span><span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>/Scripts
-</span></span><span style="display:flex;"><span>    <span style="color:#963">PY</span><span style="color:#333">=</span>python
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># make it work on windows too</span>
+</span></span><span style="display:flex;"><span>ifeq <span style="color:#ff79c6">(</span><span style="color:#ff79c6">$(</span>OS<span style="color:#ff79c6">)</span>, Windows_NT<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">BIN</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>/Scripts
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">PY</span><span style="color:#ff79c6">=</span>python
 </span></span><span style="display:flex;"><span>endif
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>: requirements.txt
-</span></span><span style="display:flex;"><span>	<span style="color:#080;font-weight:bold">$(</span>PY<span style="color:#080;font-weight:bold">)</span> -m venv <span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#080;font-weight:bold">$(</span>BIN<span style="color:#080;font-weight:bold">)</span>/pip install --upgrade -r requirements.txt
-</span></span><span style="display:flex;"><span>	touch <span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;virtualenv created.&#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;activate venv in current session by running -&gt; . ./</span><span style="color:#080;font-weight:bold">$(</span>BIN<span style="color:#080;font-weight:bold">)</span><span style="background-color:#fff0f0">/activate &#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>: requirements.txt
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">$(</span>PY<span style="color:#ff79c6">)</span> -m venv <span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">$(</span>BIN<span style="color:#ff79c6">)</span>/pip install --upgrade -r requirements.txt
+</span></span><span style="display:flex;"><span>	touch <span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;virtualenv created.&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;activate venv in current session by running -&gt; . ./</span><span style="color:#ff79c6">$(</span>BIN<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">/activate &#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.PHONY: <span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>.PHONY: <span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>clean:
-</span></span><span style="display:flex;"><span>	rm -rf <span style="color:#080;font-weight:bold">$(</span>VENV<span style="color:#080;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>	rm -rf <span style="color:#ff79c6">$(</span>VENV<span style="color:#ff79c6">)</span>
 </span></span></code></pre></div><p><strong>Terraform</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888"># Makefile &#39;terraform&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#888"># ref: https://www.sapranidis.gr/working-with-terraform-and-makefile/</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Makefile &#39;terraform&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ref: https://www.sapranidis.gr/working-with-terraform-and-makefile/</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SHELL:<span style="color:#333">=</span>/bin/bash
+</span></span><span style="display:flex;"><span>SHELL:<span style="color:#ff79c6">=</span>/bin/bash
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>all: plan
 </span></span><span style="display:flex;"><span>
@@ -154,66 +219,66 @@ already had me covered 😊 and I was able to overcome this using following:</p>
 </span></span><span style="display:flex;"><span>	rm -f /tmp/plan_stg
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>get:
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Updating modules&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Updating modules&#34;</span>
 </span></span><span style="display:flex;"><span>	@terraform get -update
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>format:
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Format existing code&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Format existing code&#34;</span>
 </span></span><span style="display:flex;"><span>	@terraform fmt
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>show:
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Showing plan to apply&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Showing plan to apply&#34;</span>
 </span></span><span style="display:flex;"><span>	@terraform show /tmp/plan_stg
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>plan: format get
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Checking Infrastracture&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Checking Infrastracture&#34;</span>
 </span></span><span style="display:flex;"><span>	@terraform plan -out /tmp/plan_stg
-</span></span><span style="display:flex;"><span>	<span style="color:#080;font-weight:bold">$(</span>MAKE<span style="color:#080;font-weight:bold">)</span> confirm
-</span></span><span style="display:flex;"><span>	<span style="color:#080;font-weight:bold">$(</span>MAKE<span style="color:#080;font-weight:bold">)</span> apply
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">$(</span>MAKE<span style="color:#ff79c6">)</span> confirm
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">$(</span>MAKE<span style="color:#ff79c6">)</span> apply
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>apply:
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Applying changes to Infrastracture&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Applying changes to Infrastracture&#34;</span>
 </span></span><span style="display:flex;"><span>	@terraform apply /tmp/plan_stg
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Clean up after myself&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#080;font-weight:bold">$(</span>MAKE<span style="color:#080;font-weight:bold">)</span> clean
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Clean up after myself&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">$(</span>MAKE<span style="color:#ff79c6">)</span> clean
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>confirm:
-</span></span><span style="display:flex;"><span>	@read -r -t <span style="color:#60e;font-weight:bold">5</span> -p <span style="background-color:#fff0f0">&#34;Type y to apply, otherwise it will abort (timeout in 5 seconds): &#34;</span> CONTINUE; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>	<span style="color:#080;font-weight:bold">if</span> <span style="color:#333">[</span> ! <span style="color:#963">$$CONTINUE</span> <span style="color:#333">==</span> <span style="background-color:#fff0f0">&#34;y&#34;</span> <span style="color:#333">]</span> <span style="color:#333">||</span> <span style="color:#333">[</span> -z <span style="color:#963">$$</span>CONTINUE <span style="color:#333">]</span>; <span style="color:#080;font-weight:bold">then</span> <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>	    <span style="color:#007020">echo</span> <span style="background-color:#fff0f0">&#34;Abort apply.&#34;</span> ; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>		<span style="color:#007020">exit</span> 1; <span style="color:#666;background-color:#fff0f0;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#666;background-color:#fff0f0;font-weight:bold"></span>	<span style="color:#080;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span>	@read -r -t <span style="color:#bd93f9">5</span> -p <span style="color:#f1fa8c">&#34;Type y to apply, otherwise it will abort (timeout in 5 seconds): &#34;</span> CONTINUE; <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	<span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> ! <span style="color:#8be9fd;font-style:italic">$$CONTINUE</span> <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;y&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">||</span> <span style="color:#ff79c6">[</span> -z <span style="color:#8be9fd;font-style:italic">$$</span>CONTINUE <span style="color:#ff79c6">]</span>; <span style="color:#ff79c6">then</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Abort apply.&#34;</span> ; <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>		<span style="color:#8be9fd;font-style:italic">exit</span> 1; <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	<span style="color:#ff79c6">fi</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>help: 
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Usage: make plan&#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;After applying terraform plan it prompt if to apply the changes.&#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34;Other commands: &#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34; * make show - to list what the plan will apply &#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34; * make clean - delete the executed plan, so no files left behind &#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34; * make get - update the teffarom modules&#34;</span>
-</span></span><span style="display:flex;"><span>	@echo <span style="background-color:#fff0f0">&#34; * make format - execute terraform fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Usage: make plan&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;After applying terraform plan it prompt if to apply the changes.&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34;Other commands: &#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34; * make show - to list what the plan will apply &#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34; * make clean - delete the executed plan, so no files left behind &#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34; * make get - update the teffarom modules&#34;</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#f1fa8c">&#34; * make format - execute terraform fmt&#34;</span>
 </span></span></code></pre></div><p><strong>Go</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888"># Makefile &#39;go&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#888"># ref: https://golangdocs.com/makefiles-golang</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Makefile &#39;go&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ref: https://golangdocs.com/makefiles-golang</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#963">BINARY_NAME</span><span style="color:#333">=</span>my-awesome-app
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#ff79c6">=</span>my-awesome-app
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>all: build <span style="color:#007020">test</span>
+</span></span><span style="display:flex;"><span>all: build <span style="color:#8be9fd;font-style:italic">test</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>run:
-</span></span><span style="display:flex;"><span>	go build -o bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span> *.go
-</span></span><span style="display:flex;"><span>	./bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>
+</span></span><span style="display:flex;"><span>	go build -o bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span> *.go
+</span></span><span style="display:flex;"><span>	./bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>build:
-</span></span><span style="display:flex;"><span>	<span style="color:#963">GOARCH</span><span style="color:#333">=</span>amd64 <span style="color:#963">GOOS</span><span style="color:#333">=</span>darwin go build -o bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>-darwin *.go
-</span></span><span style="display:flex;"><span>	<span style="color:#963">GOARCH</span><span style="color:#333">=</span>amd64 <span style="color:#963">GOOS</span><span style="color:#333">=</span>linux go build -o bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>-linux *.go
-</span></span><span style="display:flex;"><span>	<span style="color:#963">GOARCH</span><span style="color:#333">=</span>amd64 <span style="color:#963">GOOS</span><span style="color:#333">=</span>window go build -o bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>-windows *.go
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">GOARCH</span><span style="color:#ff79c6">=</span>amd64 <span style="color:#8be9fd;font-style:italic">GOOS</span><span style="color:#ff79c6">=</span>darwin go build -o bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>-darwin *.go
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">GOARCH</span><span style="color:#ff79c6">=</span>amd64 <span style="color:#8be9fd;font-style:italic">GOOS</span><span style="color:#ff79c6">=</span>linux go build -o bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>-linux *.go
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">GOARCH</span><span style="color:#ff79c6">=</span>amd64 <span style="color:#8be9fd;font-style:italic">GOOS</span><span style="color:#ff79c6">=</span>window go build -o bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>-windows *.go
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>clean:
 </span></span><span style="display:flex;"><span>	go clean
-</span></span><span style="display:flex;"><span>	rm bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>-darwin
-</span></span><span style="display:flex;"><span>	rm bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>-linux
-</span></span><span style="display:flex;"><span>	rm bin/<span style="background-color:#eee">${</span><span style="color:#963">BINARY_NAME</span><span style="background-color:#eee">}</span>-windows
+</span></span><span style="display:flex;"><span>	rm bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>-darwin
+</span></span><span style="display:flex;"><span>	rm bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>-linux
+</span></span><span style="display:flex;"><span>	rm bin/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BINARY_NAME</span><span style="color:#f1fa8c">}</span>-windows
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>dep:
 </span></span><span style="display:flex;"><span>	go mod download
@@ -222,78 +287,77 @@ already had me covered 😊 and I was able to overcome this using following:</p>
 </span></span><span style="display:flex;"><span>	go vet
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>test:
-</span></span><span style="display:flex;"><span>	go <span style="color:#007020">test</span> -v *.go
+</span></span><span style="display:flex;"><span>	go <span style="color:#8be9fd;font-style:italic">test</span> -v *.go
 </span></span></code></pre></div>
-	</div>
-	
-	
-	
-	
-	
-		
-	
-	
-	
-	<div class="tags">
-		<div class="taxosfloating_left">
-			<p>Tags</p>
-		</div>
-		<div class="termsfloating_right">
-			<p>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			<a href="/tags/makefile/"> makefile </a>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			<a href="/tags/python/"> python </a>
-			
-			
-			
-			
-			
-			<a href="/tags/terraform/"> terraform </a>
-			
-			
-			
-			</p>
-		</div>
-		<div class="clearit"></div>
-		
-		
-		
-		
-		
-	</div></div>
-
-  </main>
+      </div>
 
 
+      <footer>
+        
 
 
+        
+        
+        
+      </footer>
+    </article>
 
-</body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Karanbir Singh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
 </html>
