@@ -1,21 +1,22 @@
 baseURL = "https://karanbirsingh7.github.io/"
-languageCode = "en-us"
-title = "Karanbir Singh"
-theme = "hugo-vitae"
+title = "karanbir"
+theme = "hugo-coder"
+languageCode = "en"
 enableEmoji = true
-pygmentsstyle = "colorful"
+pygmentsstyle = "dracula"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
-	# Use homepage.md instead of a list of posts
-	homepage = false
-
-	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["hugo","vitae","theme","static"]
-
-	# Add meta description in head part
+	author = "Karanbir Singh"
+	info = "SW/SRE"
 	description = "[ Automation | Cloud | Containers ]"
+	keywords = "blog, developer, personal, sre"
+	avatarurl = "img/avatar.png"
+	homepage = false
+	enableTwemoji = true
+	colorScheme = "auto"
+	hidecolorschemetoggle = false
 
 	# Add pagetitle to homepage <title> tag
 	#pagetitle = "karanbirsingh7"
@@ -23,40 +24,19 @@ pygmentscodefencesguesssyntax = true
 	# Add a subtitle to your website
 	subtitle = "Platform Reliability Engineer @ Manulife | Working with Cloud & Containers"
 
-	# Activate to show authors on pages if available
-	#listAuthor = true
-
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
-
-	# Optional 80x80 avatar image.
-	avatar = "/img/avatar.png"
-
-	# Optional favicons for website
-	#favicon = true
 
 	# Add list of sections that should show up on the homepage
     mainSections = ["posts"]
 
-	# Add list of Sections/Types that should no be considered by RSS
-	#nofeedSections = ["post"]
-
-	# Deactivate Taxonomies for specific page types
-	#disableTaxoTypes = [""]
-
-	# Custom CSS applied to default styles. (Path could be "static/css/")
-	#customCSS = "css/custom.css"
 
 # Navigation
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
 
 [[menu.main]]
-name = "All Posts"
+name = "Blog"
 url = "/posts"
-weight = 2
+weight = 1
 
 [[menu.main]]
 name = "About"
@@ -66,21 +46,24 @@ weight = 3
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 4
-
-[[menu.main]]
-name = "Categories"
-url = "/categories"
-weight = 5
+weight = 2
 
 
 # Social Menu
-[[params.social]]
-name = "Github"
-icon = "fab fa-github"
-url = "https://github.com/karanbirsingh7"
+	[[params.social]]
+	name = "Github"
+	icon = "fa fa-github fa-2x"
+	weight = 3
+	url = "https://github.com/karanbirsingh7"
 
 [[params.social]]
-name = "Email"
-icon = "fas fa-envelope"
-cmd = "mailto:karanbirsingh1161@gmail.com"
+	name = "Email"
+	icon = "fa fa-envelope fa-2x"
+	weight = 3
+	url = "mailto:karanbirsingh1161@gmail.com"
+
+#[[params.social]]
+#	name = "Twitter"
+#	icon = "fa fa-twitter fa-2x"
+#	weight = 3
+#	url = "https://twitter.com/karanb1r_singh/"
