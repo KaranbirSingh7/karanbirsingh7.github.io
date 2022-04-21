@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Karanbir Singh"
 theme = "hugo-vitae"
 enableEmoji = true
-pygmentsstyle = "colorful"
+pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
