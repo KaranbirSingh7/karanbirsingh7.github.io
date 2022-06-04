@@ -22,7 +22,7 @@ pygmentscodefencesguesssyntax = true
 	#pagetitle = "karanbirsingh7"
 
 	# Add a subtitle to your website
-	subtitle = "Platform Reliability Engineer @ Manulife | Working with Cloud & Containers"
+	subtitle = "Senior Cloud Engineer @ RBC | Working with Cloud & Containers"
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
