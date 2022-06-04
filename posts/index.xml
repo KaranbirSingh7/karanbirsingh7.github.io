@@ -36,7 +36,7 @@ This list of most common OpenSSL commands from SSLShopper covers more of the wha
       <guid>https://karanbirsingh7.github.io/posts/automating-mac-dev-setup/</guid>
       <description>This weekend I spent my time configuring dotfiles and automating the development setup on mac using ansible playbooks.
 Inspired by geerlingguy/mac-dev-playbook
- Why would you need something like this for development setup?
+Why would you need something like this for development setup?
 Normally, you never know when your machine (mac) is going to have issues and you need to reconfigure new machine with all the required tools and configurations. In corporate world, it is normal to have your machine replaced for certain reasons.</description>
     </item>
     
